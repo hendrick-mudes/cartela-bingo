@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartela de Bingo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Tela 1: Login -->
+    <div id="login-screen" class="container">
+        <h1>Gerador de Cartela</h1>
+        <input type="text" id="playerName" placeholder="Digite seu nome..." autocomplete="off">
+        <button onclick="startGame()">Entrar no Jogo</button>
+    </div>
+
+    <!-- Tela 2: Jogo -->
+    <div id="game-screen" class="container">
+        <div class="player-name-display" id="displayName"></div>
+        <div class="bingo-card" id="card"></div>
+        <button onclick="resetApp()" style="background-color: #64748b;">Sair</button>
+    </div>
+
+    <!-- Tela 3: Vitória -->
+    <div id="win-screen" class="container">
+        <h1 class="win-title">BINGO!</h1>
+        <p style="margin-bottom: 20px; font-size: 1.2rem;">Parabéns, <span id="winnerName"></span>!</p>
+        <button onclick="startGame()">Nova Partida</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
